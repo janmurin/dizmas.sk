@@ -1,0 +1,146 @@
+/*=====  SLIDE MENU  ======*/
+
+/*----------  HIDE SELECT CHECKBOX  ----------*/
+
+.toggle, 
+.full-screen-close
+{
+	display: none;
+}
+
+.full-screen-close
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	cursor: pointer;
+	top:0;
+	left:0;
+}
+
+/*----------  TOGGLE OFF-CANVAS MENU  ----------*/
+
+.toggle:checked + .container > .menu-container 
+{
+  	margin-left: 68%;
+}
+
+.toggle:checked + .container > .content .full-screen-close
+{
+  	display: block;
+  	background: rgba(0,0,0,.5);
+}
+
+.menu
+{
+	padding-top: 24px;
+}
+
+.right {
+    float: right;
+    position:fixed;
+    z-index: 20;
+    top:1.1em;
+    right:5.5em;
+    display:none;
+}
+
+.toggle-btn,
+.close-btn
+{
+	cursor: pointer;
+}
+
+.toggle-btn
+{
+	font-size: 2.25rem;
+}
+
+
+.close-btn
+{
+	/*float: right;*/
+	font-size: 1.5rem;
+	padding:1% 5% ;
+
+	color: #ededed;
+	/*text-align: right;*/
+
+}
+
+.menu-container, 
+.content
+{
+	transition: margin 0.5s ease-in-out;
+}
+
+.menu-container
+{
+	background: #2c3e50;
+	width: 40%;
+	margin-left: 100%;
+	
+	float: right;
+	height: 100%;
+	position: absolute;
+
+	z-index:99;
+	
+}
+
+/*.slide-menu{
+padding-left: 35%;	
+}
+*/
+
+
+.slide-menu i
+{
+	margin-right: 1rem;
+	font-size: 1.5rem;
+
+	vertical-align: middle;
+}
+.slide-menu li a
+{
+	color: #fff;
+	padding: 1.5rem;
+	letter-spacing: 0.25em;
+	font-size: 0.8em;
+
+	text-transform: uppercase;
+	font-weight: 400;
+
+	display: block;
+
+	transition: background-color .5s ease-in-out;
+}
+
+.slide-menu li a:hover
+{
+	background-color: #34495e;
+}
+
+
+
+
+/*=====  MEDIA QUERIES  ======*/
+@media (max-width: 460px) {
+	.slide-menu li a
+	{
+		font-size: 0.875rem;
+		padding-left: 12px;
+	}
+
+	.slide-menu li i
+	{
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 320px){
+	.slide-menu li i
+	{
+		display: none;
+	}
+}
